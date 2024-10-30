@@ -1,0 +1,208 @@
+body {
+    /* margin: 0px;
+    padding: 0px; */
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
+    display: block;
+
+}
+
+.boardpage {
+    /* position: relative; */
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.boardpage .part1 {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+
+}
+
+.boardpage .text {
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 130px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.boardpage .text .text-a {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+
+}
+
+.boardpage .text .text-b {
+    margin-top: 5px;
+    font-size: 65px;
+}
+
+.boardpage .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 30px; */
+    /* padding-right: 0px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    height: 50px;
+    /* margin-left: 100px; */
+    margin-top: 500px;
+    position: absolute;
+}
+
+.boardpage .navbar .menu-category {
+    display: flex;
+    padding-left: 100px;
+    align-items: center;
+}
+
+.boardpage .navbar .menu-category .home-icon {
+    margin-right: 20px;
+}
+
+.boardpage .navbar .menu-category .home-icon .homeimage {
+
+
+}
+
+.boardpage .navbar .menu-category .home-icon .homeimage img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+}
+
+.boardpage .navbar .menu-category .dropdown .menu-item {
+    margin-right: 20px;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+/* .homepage1 .navbar .menu-category1 .dropdown .menu-item:hover {
+    color: #007bff;
+} */
+
+.boardpage .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+.boardpage .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.boardpage .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.boardpage .dropdown-content a:hover {
+    /* background-color: #f1f1f1; */
+    color:  #046cc4;
+    font-weight: bold;
+}
+
+.boardpage .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.boardpage .dropdown::after {
+    content: url(/images/dropdown2.png);
+    margin-left: 5px;
+    font-size: 19px;
+    display: inline-block;
+    transform: scale(0.3);
+    transform-origin: center;
+    vertical-align: middle;
+}
+
+/* --------------------------------------------- */
+.boardpage .board {
+    margin-top: 700px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 1000px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.boardpage .board h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.boardpage .board p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.boardpage .board p span {
+    font-weight: normal;
+    color: #333;
+}
+
+/* 목록 버튼 스타일 */
+.board_list_button {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.board_list_button a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.board_list_button a:hover {
+    background-color: #0056b3;
+}

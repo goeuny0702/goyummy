@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/find_info.css">
+    <title>LoginForm</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2 class="find">
+            ID찾기
+            비밀번호 찾기
+        </h2>
+        
+        <form action="/login" method="post">
+            <label for="auth_phone">휴대폰 인증</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="auth_toss">토스 인증</label>
+            <input type="text" id="password" name="password" required>
+    
+        </form>
+    </div>
+
+</body>
+</html>

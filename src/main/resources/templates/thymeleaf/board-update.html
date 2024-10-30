@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>(주)신우시스템</title>
+    <link th:href="@{/css/header.css}" rel="stylesheet">
+    <link th:href="@{/css/footer.css}" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/그림1.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link th:href="@{/css/menu.css}" rel="stylesheet">
+    <link th:href="@{/css/board-update.css}" rel="stylesheet">
+</head>
+<body>
+<div th:insert="layouts/header :: header"></div>
+
+<div class="boardpage">
+    <img class="part1" th:src="@{/images/board.webp}" alt="게시판">
+    <div class="text">
+        <p class="text-a">Notice Board</p>
+        <p class="text-b">게시판</p>
+    </div>
+
+    <div class="navbar">
+        <div class="menu-category">
+            <div class="home-icon">
+                <a th:href="@{/main}" class="homeimage"><img th:src="@{/images/home-icon.png}" alt="homeimage"></a>
+            </div>
+            <div class="dropdown">
+                <a class="menu-item">고객센터</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/part1}">신우시스템</a>
+                    <a th:href="@{/machine}">사업분야</a>
+                    <a th:href="@{/part5}">생산공정</a>
+                    <a th:href="@{/precision}">제품소개</a>
+                    <a th:href="@{/board-list}">고객센터</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="menu-item">게시판·기타</a>
+                <div class="dropdown-content">
+                    <a th:href="@{/board-list}">게시판·기타</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="board_update">
+        <p></p>
+        <form action="#" th:action="@{/board-update}" method="post">
+            <input type="hidden" th:value="${board.id}" name="id" />
+
+            <label for="title">제목:</label>
+            <input type="text" id="title" th:value="${board.title}" name="title" />
+
+            <label for="writer">작성자:</label>
+            <input type="text" id="writer" th:value="${board.writer}" name="writer" />
+
+            <label for="content">내용:</label>
+            <textarea id="content" name="content" th:text="${board.content}"></textarea>
+
+            <button type="submit">수정하기</button>
+        </form>
+        <div class="board_list_button">
+            <a href="/board-list">목록</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- 푸터 -->
+<div th:replace="layouts/footer :: footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <title>㈜신우시스템</title>
+</head>
+<body>
+<!-- 헤더 -->
+<div th:replace="layouts/header :: header"></div>
+
+<!-- 로그인 래퍼 -->
+<div class="login-wrapper">
+    <div class="back_img">
+        <img th:src="@{/images/login_img2.jpg}" alt="게시판">
+    </div>
+    <div class="login-box">
+        <div class="avatar">
+            <img th:src="@{https://cdn-icons-png.flaticon.com/512/149/149071.png}" alt="User Avatar">
+        </div>
+        <form action="/loginprocess" method="post">
+            <div class="input-group">
+                <label for="username"><i class="fa fa-user"></i></label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <label for="password"><i class="fa fa-lock"></i></label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <input type="submit" class="login-btn" name="action" value="로그인">
+
+            <!-- 소셜 로그인 섹션 -->
+            <div class="social-logins">
+                <!-- 구글 로그인 -->
+                <a href="/oauth2/authorization/google" class="google_login">
+                    <img src="/images/web_light_sq_SU@2x.png" alt="구글 로그인">
+                </a>
+
+                <!-- 네이버 로그인 -->
+                <a href="/oauth2/authorization/naver" class="naver_login">
+                    <img src="/images/btnG_완성형.png" alt="네이버 로그인">
+                </a>
+
+                <!-- 카카오 로그인 -->
+                <a href="/oauth2/authorization/kakao" class="kakao_login">
+                    <img src="/images/kakao_login_medium_narrow.png" alt="카카오 로그인">
+                </a>
+            </div>
+
+            <!-- 회원가입 링크 -->
+            <div class="link">
+                <a href="sign_up" class="signup-button">회원가입</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- 푸터 -->
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,386 @@
+body {
+    /* margin: 0px;
+    padding: 0px; */
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
+    display: block;
+
+}
+
+.boardpage {
+    /* position: relative; */
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.boardpage .part1 {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+
+}
+
+.boardpage .text {
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 130px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.boardpage .text .text-a {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+
+}
+
+.boardpage .text .text-b {
+    margin-top: 5px;
+    font-size: 65px;
+}
+
+.boardpage .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 30px; */
+    /* padding-right: 0px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    height: 50px;
+    /* margin-left: 100px; */
+    margin-top: 500px;
+    position: absolute;
+}
+
+.boardpage .navbar .menu-category {
+    display: flex;
+    padding-left: 100px;
+    align-items: center;
+}
+
+.boardpage .navbar .menu-category .home-icon {
+    margin-right: 20px;
+}
+
+.boardpage .navbar .menu-category .home-icon .homeimage {
+
+
+}
+
+.boardpage .navbar .menu-category .home-icon .homeimage img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+}
+
+.boardpage .navbar .menu-category .dropdown .menu-item {
+    margin-right: 20px;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+/* .homepage1 .navbar .menu-category1 .dropdown .menu-item:hover {
+    color: #007bff;
+} */
+
+.boardpage .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+.boardpage .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.boardpage .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.boardpage .dropdown-content a:hover {
+    /* background-color: #f1f1f1; */
+    color:  #046cc4;
+    font-weight: bold;
+}
+
+.boardpage .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.boardpage .dropdown::after {
+    content: url(/images/dropdown2.png);
+    margin-left: 5px;
+    font-size: 19px;
+    display: inline-block;
+    transform: scale(0.3);
+    transform-origin: center;
+    vertical-align: middle;
+}
+
+.boardpage .part2 {
+    margin-top: 600px;
+    position: relative;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+.boardpage .part2 h1 {
+    font-size: 35px;
+    color: #333;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* FAQ 섹션 스타일 */
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #005b9e;
+}
+
+.faq-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    font-weight: bold;
+    background: none;
+    color: #005b9e;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 24px;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    background-color: #e9ecef;
+    margin-top: 15px;
+    padding: 15px 20px;
+    display: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* FAQ 항목이 활성화되었을 때 */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* 게시글 작성 */
+.board-list {
+    margin-top: 100px;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* 게시글 작성 버튼 스타일 */
+.board-list .board_insert_button {
+    margin-left: 1050px;
+    /*display: flex;*/
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.board-list .board_insert_button a {
+    text-decoration: none;
+    background-color: #005b9e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 91, 158, 0.4);
+}
+
+.board-list .board_insert_button a:hover {
+    background-color: #004080;
+    box-shadow: 0 6px 15px rgba(0, 64, 128, 0.5);
+}
+
+/* 게시글 헤더 스타일 */
+.board-list .board_header {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005b9e;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 게시글 리스트 항목 스타일 */
+.board-list .detail_box {
+    max-width: 900px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.board-list .detail_box:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.board-list .title_button,
+.writer_button {
+    flex: 2;
+    margin-right: 277px;
+    color: #333;
+    font-size: 16px;
+}
+
+.board-list .title_button a {
+    text-decoration: none;
+    color: #005b9e;
+    font-weight: bold;
+}
+
+.board-list .title_button a:hover {
+    text-decoration: underline;
+}
+
+.writer_button {
+    flex: 1;
+    text-align: left;
+}
+
+.board-list .update_button,
+.board-list .delete_button {
+    margin-left: 15px;
+}
+
+.board-list .update_button a,
+.board-list .delete_button a {
+    color: #888;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.board-list .update_button a:hover {
+    background-color: #e0e0e0;
+    color: #005b9e;
+}
+
+.board-list .delete_button a:hover {
+    background-color: #f8d7da;
+    color: #c82333;
+}
+
+/* 리스트 스타일 */
+.board-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.board-list li {
+    margin: 15px 0;
+}
+
+/* 페이지네이션 스타일 */
+.board-list .pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.board-list .pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #005b9e;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.board-list .pagination a:hover {
+    background-color: #f1f1f1;
+}
+
+.board-list .pagination span {
+    margin: 0 10px;
+    font-weight: bold;
+    color: #888;
+}

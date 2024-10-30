@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link rel="stylesheet" th:href="@{/css/part3.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="shortcut icon" th:href="@{/images/그림1.png}">
+    <link rel="icon" th:href="@{/images/그림1.png}" />
+</head>
+<body>
+<div th:insert="layouts/header :: header"></div>
+
+    <div class="homepage3">
+        <img class="part1" src="./images/image4.jpg">
+        <div class="text">
+            <p class="text-a">History</p>
+            <p class="text-b">연혁</p>
+        </div>
+        
+        <div class="navbar">
+            <div class="menu-category">
+                <div class="home-icon">
+                    <a th:href="@{/main}" class="homeimage"><img src="./images/home-icon.png" alt="homeimage"></a>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">신우시스템</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">신우시스템</a>
+                        <a th:href="@{/machine}">사업분야</a>
+                        <a th:href="@{/part5}">생산공정</a>
+                        <a th:href="@{/precision}">제품소개</a>
+                        <a th:href="@{/board-list}">고객센터</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">연혁</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">ceo 인사말</a>
+                        <a th:href="@{/part2}">회사개요</a>
+                        <a th:href="@{/part3}">연혁</a>
+                        <a th:href="@{/part4}">오시는길</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="part2">
+            <h1>연혁</h1>
+            <div class="part2_img">
+                <img th:src="@{/images/company.png}" alt="part2_img">
+                <div class="part2_text">
+                    <p>SINCE 2011</p>
+                    <div class="part2_text2">
+                        <p>신우시스템은 2011년 창립이래</p>
+                        <p>끊임없는 기술혁신으로 지속적인 성장을 이루기 위해 노력하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-img">
+                    <div class="images">
+                        <img th:src="@{/images/timeline.png}" alt="img1" class="image1">
+                        <img th:src="@{/images/timeline2.png}" alt="img2" class="image2">
+                    </div>
+                    <p class="text-a">2003</p>
+                    <p class="text-b">2024</p>
+                </div>
+                <div class="timeline-text">
+                    <p>• 2003. 10 신우테크 설립</p>
+                    <p>• 2006. 07 안성공장 신축이전</p>
+                    <p>• 2011. 07 ㈜신우시스템 법인 설립</p>
+                    <p>• 2012. 03 외주물량 제작 및 조립 협약 체결(Justek, LIG 에이디피)</p>
+                    <p>• 2016. 11 용인공장 신축이전</p>
+                    <p>• Soler Ball Attaching Module 장비 계약 체결(생산기술연구원)</p>
+                    <p>• 전동 롤 방식의  원추형 모터 계약 체결(생산기술연구원)</p>
+                    <p>• 와이어 로봇 제작/조립(한국기계연구원)</p>
+                    <p>• 달착륙선 damper 선행연구 참여(한국항공대학교)</p>
+                    <p>• Molding 공정 성능 평가 및 가압모듈 계약 체결 (생산기술연구원)</p>
+                    <p>• 전 방향 이동 플랫폼 시스템 시제품 계약 체결(생산기술연구원)</p>
+                    <p>• 인증 및 시험평가 JIG 제작(한국산업기술시험원)</p>
+                    <p>• SOS 비상 호출 지킴이 캐릭터 시제품 제작(생산기술연구원)</p>
+                    <p>• 전 방향 도보 플랫폼 모터 토크 검사장치 제작(생산기술연구원)</p>
+                    <p>• MR, TR, Slip ring 내구성 검사 장비 개발(연합정밀 주식회사)</p>
+                    <p>• BLU 도강판 타공 장비개발(동원기술)</p>
+                    <p>• OLED IVL 휘도 검사장비 개발(LMS 주식회사)</p>
+                    <p>• 인장, 압축, 전단 응력 복합 시험 치공구 개발(한국산업기술시험원)</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+  <div th:insert="layouts/footer :: footer"></div>
+  
+</body>
+</html>

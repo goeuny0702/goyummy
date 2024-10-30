@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link th:href="@{/css/design.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <script defer src="./js/main2.js"></script>
+    <link rel="shortcut icon" th:href="@{/images/그림1.png}" />
+    <link rel="icon" th:href="@{/images/그림1.png}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<div th:insert="layouts/header :: header"></div>
+
+    <div class="container">
+        <div class="image-group">
+            <div class="image-container">
+                <img th:src="@{/images/설계.jpg}" alt="신우시스템">
+                <div class="text-overlay">
+                    <p class="text-a">DESIGN & LAYOUT</p>
+                    <p class="text-b">디자인 및 설계</p>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------->
+        <div class="menu-box">
+            <div class="inner">
+                <a th:href="@{/main}">
+                    <span class="material-symbols-outlined">home</span>
+                </a>
+
+                <ul class="main">
+                    <li>
+                        <a th:href="@{/precision}">
+                            제품소개
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a th:href="@{/part1}">신우시스템</a></li>
+                            <li><a th:href="@{/machine}">사업분야</a></li>
+                            <li><a th:href="@{/part5}">생산공정</a></li>
+                            <li><a th:href="@{/precision}">제품소개</a></li>
+                            <li><a th:href="@{/board-list}">고객센터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a th:href="@{/design}">
+                            디자인 및 설계
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a th:href="@{/precision}">정밀부품가공</a></li>
+                            <li><a th:href="@{/design}">디자인 및 설계</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- --------------------------------------------------- -->
+        <div class="content">
+            <div class="scroll-section">
+                <div class="text-section">
+                    <h4>디자인 및 설계</h4>
+                    <div class="btn-group">
+                        <a th:href="@{/design}" class="btn btn--black active">항공우주 시스템 제작</a>
+                        <a th:href="@{/layout}" class="btn btn--black">로봇 부품 조립 및 가공</a>
+                    </div>
+                </div>
+
+                <div class="part2">
+                    <div class="machine1">
+                        <img th:src="@{/images/1.png}" alt="machine1">
+                        <div class="machine1-table">
+                            <h2>WireRobot</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>각각의 관절부위를 와이어를 이용하여 구동</td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>18축 Motor. Spec를 기준으로 가공품 조립.
+                                        제원 : 720 X 520 X 1400&nbsp; | &nbsp;무게 : 250Kg
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>구동, 연동 테스트 완료.(한국생산기술연구원)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine2">
+                        <img th:src="@{/images/2.png}" alt="machine2">
+                        <div class="machine1-table">
+                            <h2>달착륙선 자세제어 SYSTEM</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>불규칙한 지형에서 원활한 착륙을 위한 자세제어 장치 시험장비 개발</td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>알루미늄 용접구조물, 아크릴 커버
+                                        제원 : 2100 X 2100 X 1100&nbsp; | &nbsp;무게 : 50Kg
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>한국항공대학교 납품.</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine3">
+                        <img src="/images/3.png" alt="machine3">
+                        <div class="machine1-table">
+                            <h2>OBLIQUE RING 측정기</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>DD Motor 모델별 측정가능</td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>16 Point 초정밀 GapSensor사용. 
+                                        정밀 위치조절 Unit 개발.(0.005mm)
+                                        DD Motor + Master Shaft 조립 후 측정
+                                        동심 및 평행도 측정 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>DD Motor 개발사 측정기로 사용.(Justek)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine4">
+                        <img src="/images/4.png" alt="machine4">
+                        <div class="machine1-table">
+                            <h2>전 방향 이동 플랫폼 시스템</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>VR시뮬레이션 사용자 이동구현 장치</td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>프로파일 구조물, 각각의 체인 조립
+                                        제원 : 1450 X 1100 X 300 &nbsp; | &nbsp; 무게 : 200Kg                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>DD Motor 개발사 측정기로 사용.(Justek)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine5">
+                        <img src="/images/5.png" alt="machine5">
+                        <div class="machine1-table">
+                            <h2>MR, TR Slip ring 내구성 검사 장비</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>헬기의 MR, TR Slip Ring 회전 시 피로도 측정 <br>
+                                        시간, 속도 가변가능 
+                                    </td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>가공품 정밀가공, 조립(동심:0.01) 
+                                        제원 : 1200 X 8500 X 1200 &nbsp; | &nbsp; 무게 : 260Kg                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>DD Motor 개발사 측정기로 사용.(Justek)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine6">
+                        <img src="/images/6.png" alt="machine6">
+                        <div class="machine1-table">
+                            <h2>BLU 도강판 타공 장비개발</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>BLU 도강판 금형에 정밀, 고속으로 타공
+                                        <br>
+                                        Spec : 타공간 거리 : 0.01X0.01mm
+                                        타공 속도 : 초당 50회
+                            
+                                    </td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>3축 Motor, 정밀가공, 조립
+                                        제원 : 950 X 860 X 1320 &nbsp; | &nbsp; 무게 : 320Kg                                     
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>Spec 타공속도 초당 47회. 제품생산에 사용(동원기술)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine7">
+                        <img src="/images/7.png" alt="machine7">
+                        <div class="machine1-table">
+                            <h2>기계장비 진동평가용 실험장치</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>2대의 Gantry 동시제어 가능
+                                        <br>
+                                        Head 2종류 모델 겸용 가능(Single, Double Head)
+                                    </td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>정밀가공, 조립시 직각 평행 중요
+                                        제원 : 1100 X 1050 X 880 &nbsp; | &nbsp; 무게 : 435Kg                                   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>가공부하 및 진동 실험에 사용(한국기계연구원)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-section">
+                <div class="part2">
+                    <div class="machine8">
+                        <img src="/images/8.png" alt="machine8">
+                        <div class="machine1-table">
+                            <h2>OLED IVL 휘도 검사장비</h2>
+                            <table class="machine1-text">
+                                <tr>
+                                    <th>설계 개념</th>
+                                    <td>OLED 생산 시 패턴별 휘도 검사</td>
+                                </tr>
+                                <hr>
+                                <tr>
+                                    <th>제작</th>
+                                    <td>6축 Stage 조립 각각 OLED의 전원인가 확인, 휘도 검사기 위치확인.
+                                        <br>제원 : 1600 X 1000 X 1700 &nbsp; | &nbsp; 무게 : 350Kg                                  
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결과</th>
+                                    <td>고객사 테스트 완료 후 LGD납품(LMS주식회사)</td>
+                                </tr>
+                            </table>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<div th:insert="layouts/footer :: footer"></div>
+
+</body>
+</html>

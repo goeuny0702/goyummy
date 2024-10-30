@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link rel="stylesheet" th:href="@{/css/part4.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="shortcut icon" th:href="@{/images/그림1.png}">
+    <link rel="icon" th:href="@{/images/그림1.png}" />
+</head>
+<body>
+
+<div th:insert="layouts/header :: header"></div>
+
+
+    <div class="homepage4">
+        <img class="part1" th:src="@{/images/image5.jpg}">
+        <div class="text">
+            <p class="text-a">a view of the company</p>
+            <p class="text-b">오시는 길 & 회사전경</p>
+        </div>
+        
+        <div class="navbar">
+            <div class="menu-category">
+                <div class="home-icon">
+                    <a th:href="@{/main}" class="homeimage"><img src="./images/home-icon.png" alt="homeimage"></a>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">신우시스템</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">신우시스템</a>
+                        <a th:href="@{/machine}">사업분야</a>
+                        <a th:href="@{/part5}">생산공정</a>
+                        <a th:href="@{/precision}">제품소개</a>
+                        <a th:href="@{/board-list}">고객센터</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">오시는 길</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">ceo 인사말</a>
+                        <a th:href="@{/part2}">회사개요</a>
+                        <a th:href="@{/part3}">연혁</a>
+                        <a th:href="@{/part4}">오시는길</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part2">
+            <h1>회사전경</h1>
+            <div class="slider">
+                <!-- 라디오 버튼 -->
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <input type="radio" name="slider" id="slide5">
+
+                <div class="slides">
+                    <div class="slide" id="img1">
+                        <img th:src="@{/images/company1.jpg}" alt="img1">
+                    </div>
+                    <div class="slide" id="img2">
+                        <img th:src="@{/images/company2.jpg}" alt="img2">
+                    </div>
+                    <div class="slide" id="img3">
+                        <img th:src="@{/images/company3.jpg}" alt="img3">
+                    </div>
+                    <div class="slide" id="img4">
+                        <img th:src="@{/images/company4.jpg}" alt="img4">
+                    </div>
+                    <div class="slide" id="img5">
+                        <img th:src="@{/images/company6.jpg}" alt="img5">
+                    </div>
+                </div>
+
+                <!-- 네비게이션 버튼 (라벨을 클릭하면 슬라이드 이동) -->
+                <div class="navigation">
+                    <label for="slide1" class="nav-btn"></label>
+                    <label for="slide2" class="nav-btn"></label>
+                    <label for="slide3" class="nav-btn"></label>
+                    <label for="slide4" class="nav-btn"></label>
+                    <label for="slide5" class="nav-btn"></label>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="part3">
+            <h1>오시는 길</h1>
+            <div class="map">
+                <!-- <img src="/images/map2.png" alt="map"> -->
+            </div>
+            <div class="map_text">
+                <div class="address_fax">
+                    <div class="address">
+                        <img th:src="@{/images/map_ic.png}" alt="mapic">
+                        <p class="text-a">주소</p>
+                        <p class="text-b">경기 용인시 처인구 남사읍 원암로 341</p>
+                    </div>
+                    <div class="fax">
+                        <img th:src="@{/images/icon_fax.png}" alt="fax">
+                        <p class="text-a">팩스</p>
+                        <p class="text-b">031-624-3721</p>
+                    </div>
+                </div>
+
+                <div class="call_email">
+                    <div class="call">
+                        <img th:src="@{/images/icon_call.png}" alt="call">
+                        <p class="text-a">전화번호</p>
+                        <p class="text-b">031-334-8417</p>
+                    </div>
+                    <div class="email">
+                        <img th:src="@{/images/icon_mail.png}" alt="mail">
+                        <p class="text-a">이메일</p>
+                        <p class="text-b">sinwoosystem@daum.net</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+<div th:insert="layouts/footer :: footer"></div>
+    
+</body>
+</html>

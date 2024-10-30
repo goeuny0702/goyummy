@@ -1,0 +1,84 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.10'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//jpa를 사용할 수 있게 해주는 디펜던시
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//핵심 라이브러리와 설정이 자동으로 제공되는 이를테면 스타터팩. 예를들어 REST API 개발에 필요한 기본 설정.
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//시큐리티 관련 의존성.
+	implementation 'org.springframework.boot:spring-boot-starter-security'	
+	// oauth 관련 의존성	
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+	
+	// 이상 oauth제외 세개는 기본적으로 생성될때 제네레이트했던 것.
+	
+	// 탐캣 관련 의존성
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.1.19'
+	
+	//jstl(jsp Standard Tag Library) api 제공. 이하 세개는 jsp와 jstl기능을 구현.
+	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.1'
+	//위의 jakarta.servlet에서 정의한 API의 구현체. 유연성 제공을 위해 api와 분리
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+	//서블릿 api를 제공. 웹앱에서 클라이언트 유청을 받고 응답을 반환하는 서블릿과 관련된 표준 인터페이스를 정의. 자카르타 기능 부여해주는 의존성
+	compileOnly 'jakarta.servlet:jakarta.servlet-api:6.1.0'
+	
+	//타임리프 관련 의존성. 타임리프란 html, css js등의 문서를 생성하는데 사용. 스프링부트와 자주사용된다.
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	//	mybatis를 사용할 수 있게 해주는 디펜던시. sql을 사용하려면 이 둘중하나는 선택. 하단의 runtimeonly는 필수.
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+
+	// oracle 디비와 연결하는 의존성
+	// implementation 'com.oracle.database.jdbc:ojdbc8:23.3.0.23.09'
+
+	//mysql 사용할 수 있게 해주는 디펜던시. 필수
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	
+	//테스트를 위한 종합적인 스프링부트 스타터. 테스트를 작성할 떄 필요한 모든 도구들을 제공. 이하 두개는 테스트를 작성하고 실행하는 과정을 부여
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//테스트를 실행하기 위한 런처.
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	
+	//롬복 기능 부여해주는 의존성
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	
+	// 롬복 어노테이션 기능을 부여해주는 의존성
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+	// 롬복의 어노테이션에 configuration기능을 부여해주는 의존성
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// 데브툴은 디벨롭 툴의 줄임말. 자동재시작, 라이브리로드, 캐시비활성화, 개발친화적인 설정을 부여해주는 의존성. 운영환경에선 불필요해서 디벨롭온리로 지정.
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	// 객체의 유효성을 자동으로 검증하는 valid 관련 의존성
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

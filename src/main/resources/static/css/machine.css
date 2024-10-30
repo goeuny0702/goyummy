@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+}
+
+.image-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .image-container .text-a {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+.container .image-container .text-b {
+    font-size: 65px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+/* --------------------------------------------- */
+.menu-box {
+    width: 100%;
+    height: 80px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #dddddd;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-box .inner {
+    display: flex;
+    /* max-width: 1100px; */
+    height: 80px;
+    margin: 0 auto;
+    padding-left: 100px;
+    align-items: center;
+}
+
+.menu-box .inner > a {
+    width: 24px;
+    height: 24px;
+    color: black;
+}
+
+.menu-box .main {
+    list-style: none;
+    font-size: 0;
+    margin: 0;
+    padding-left: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-box .main li {
+    display: flex;
+    height: 100%;
+}
+
+.menu-box .main li a {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding-right: 30px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.menu-box .main > li {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    font-size: 17px;
+}
+
+.menu-box .main > li > a {
+    color: black;
+    margin: 0;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.menu-box .main > li > a > span {
+    color: lightgrey;
+}
+
+.menu-box .main > li:hover > .sub {
+    display: block;
+    background-color: #F7F7F7;
+}
+
+.menu-box .sub {
+    position: relative;
+    display: none;
+    list-style: none;
+    z-index: 30;
+    width: 150px;
+    margin: 0;
+    padding: 15px;
+    
+}
+
+.menu-box .sub li a {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.menu-box .sub li a:hover {
+    color: #046cc4;
+}
+
+/* --------------------------------------------- */
+.content {
+    margin: 0;
+    padding: 80px 0;
+    width: 100%;
+    height: auto;
+    /* background-image: url(../images/); */
+}
+
+.section-machining {
+    margin: 0 auto;
+    padding-bottom: 80px;
+    max-width: 1100px;
+}
+
+.section-machining h4 {
+    justify-content: start;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 30px 0; 
+}
+
+.main-inner {
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.main-inner p {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.main-inner .a {
+    font-size: 20px;
+    color: #595959;
+}
+
+.main-inner .b {
+    font-size: 25px;
+}
+
+.main-inner .c {
+    font-size: 15px;
+    color: #595959;
+}
+
+.company {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.company img {
+    display: flex;
+    width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------- */
+.section-cnc {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.section-cnc .wrapper-cnc {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.section-cnc .wrapper-cnc .section-title {
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.section-title p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.swiper {
+    width: 60%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.swiper .swiper-pagination-bullet {
+    background-color: #595959;
+}
+
+.swiper-slide {
+    max-width: 100%;
+    height: auto;
+} 
+
+.swiper-wrapper img {
+    width: 325px;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* --------------------------------------------- */
+.section-meas {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.section-meas .wrapper-meas {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.section-meas .wrapper-meas .section-title {
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* --------------------------------------------- */
+.section-robot {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.section-robot .wrapper-robot {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.section-robot .wrapper-robot .section-title {
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* --------------------------------------------- */
+.section-military {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.section-military .wrapper-military {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.section-military .wrapper-military .section-title {
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 0;
+}
+/* --------------------------------------------- */
+
+.section-lcd {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.section-lcd .wrapper-lcd {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.section-lcd .wrapper-lcd .section-title {
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 0;
+}
+/* --------------------------------------------- */
+
+.section-mobil {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+}
+
+.section-mobil .wrapper-mobil {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.section-mobil .wrapper-mobil .section-title {
+    min-width: 160px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.section-title p.sub-text {
+    font-size: 15px; 
+    color: #8F8F8F;
+    margin: 0;
+    padding: 0;
+}
+/* --------------------------------------------- */
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

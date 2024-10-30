@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link th:href="@{/css/layout.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    
+    <script defer th:src="@{/js/main2.js}"></script>
+    <link rel="shortcut icon" th:href="@{/images/그림1.png}" />
+    <link rel="icon" th:href="@{/images/그림1.png}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+<div th:insert="layouts/header :: header"></div>
+
+    <div class="container">
+        <div class="image-group">
+            <div class="image-container">
+                <img th:src="@{/images/설계.jpg}" alt="신우시스템">
+                <div class="text-overlay">
+                    <p class="text-a">DESIGN & LAYOUT</p>
+                    <p class="text-b">디자인 및 설계</p>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------->
+        <div class="menu-box">
+            <div class="inner">
+                <a th:href="@{/main}">
+                    <span class="material-symbols-outlined">home</span>
+                </a>
+
+                <ul class="main">
+                    <li>
+                        <a th:href="@{/precision}">
+                            제품소개
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a th:href="@{/part1}">신우시스템</a></li>
+                            <li><a th:href="@{/machine}">사업분야</a></li>
+                            <li><a th:href="@{/part5}">생산공정</a></li>
+                            <li><a th:href="@{/precision}">제품소개</a></li>
+                            <li><a th:href="@{/board-list}">고객센터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a th:href="@{/main}">
+                            디자인 및 설계
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a th:href="@{/precision}">정밀부품가공</a></li>
+                            <li><a th:href="@{/design}">디자인 및 설계</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- --------------------------------------------------- -->
+        <div class="content">
+            <div class="scroll-section">
+                <div class="text-section">
+                    <h4>디자인 및 설계</h4>
+                    <div class="btn-group">
+                        <a th:href="@{/design}" class="btn btn--black">항공우주 시스템 제작</a>
+                        <a th:href="@{/layout}" class="btn btn--black active">로봇 부품 조립 및 가공</a>
+                    </div>
+                </div>
+
+                <div class="scroll-section">
+                    <div class="section-cnc">
+                        <div class="wrapper-cnc">
+                            <div class="section-title">
+                                <p>Mobil base</p>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview7.png}" alt="기계1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview8.png}" alt="기계2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview9.png}" alt="기계3">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview10.png}" alt="기계4">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview11.png}" alt="기계5">
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-section">
+                    <div class="section-robots">
+                        <div class="wrapper-robots">
+                            <div class="section-title">
+                                <p>기타 로봇</p>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview12.png}" alt="로봇1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview13.png}" alt="로봇2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview14.png}" alt="로봇3">
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-section">
+                    <div class="section-ma">
+                        <div class="wrapper-ma">
+                            <div class="section-title">
+                                <p>견마로봇</p>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview1.png}" alt="마1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview2.png}" alt="마2">
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-section">
+                    <div class="section-hend">
+                        <div class="wrapper-hend">
+                            <div class="section-title">
+                                <p>관절(Hand) 로봇</p>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview3.png}" alt="손1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview4.png}" alt="손2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview5.png}" alt="손3">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img th:src="@{/images/overview6.png}" alt="손4">
+                                        </div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+<div th:insert="layouts/footer :: footer"></div>
+
+</body>
+</html>

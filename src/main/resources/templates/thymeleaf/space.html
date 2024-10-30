@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link th:href="@{/css/space.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <script defer src="./js/main2.js"></script>
+    <link rel="shortcut icon" th:href="@{/그림1.png}" />
+    <link rel="icon" th:href="@{/그림1.png}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+
+<div th:insert="layouts/header :: header"></div>
+
+
+    <div class="container">
+        <div class="image-group">
+            <div class="image-container">
+                <img src="./images/우주.png" alt="신우시스템">
+                <div class="text-overlay">
+                    <p class="text-a">AEROSPACE </p>
+                    <p class="text-b">항공우주</p>
+                </div>
+            </div>
+        </div>
+     <!--------------------------------------------------->
+        <div class="menu-box">
+            <div class="inner">
+                <a href="#">
+                    <span class="material-symbols-outlined">home</span>
+                </a>
+
+                <ul class="main">
+                    <li>
+                        <a href="#">
+                            사업분야
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">신우시스템</a></li>
+                            <li><a href="./machine.html">사업분야</a></li>
+                            <li><a href="#">생산공정</a></li>
+                            <li><a href="#">제품소개</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./space.html">
+                            항공우주
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="./machine.html">기계가공</a></li>
+                            <li><a href="space.html">항공우주</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--------------------------------------------------->
+        <div class="content">
+            <div class="scroll-section">
+                <div class="section-aerospace">
+                    <h4>항공우주</h4>
+                    
+                    <div class="main-content">
+                      <div class="company">
+                        <img src="./images/항공우주부품.jpg" alt="신우시스템 외부">
+                      </div>
+          
+                      <div class="main-inner">
+                          <p class="a">㈜신우시스템</p>
+                          <p class="b">
+                            ㈜신우시스템은 항공우주 산업의 정밀 부품 가공 및 제작을 전문으로 하는 기업입니다. 
+                            항공우주 부품의 정밀도와 신뢰성을 충족시키기 위해 최첨단 기술과 설비를 바탕으로 
+                            다양한 항공산업 부품을 공급하고 있습니다.
+                          </p>
+                          <p class="b">
+                            주요 제품은 항공우주 부품 가공, 달착륙선 자세제어 시스템, WireRobot 등을 포함하며, 
+                            한국항공대학교와 한국생산기술연구원과의 협력을 통해 연구개발 프로젝트에 참여하고 있습니다.
+                          </p>
+                          <p class="b">
+                            항공우주 산업의 발전을 이끄는 신뢰할 수 있는 파트너로서, 
+                            신우시스템은 지속적인 혁신과 기술개발을 통해 고객에게 최상의 품질과 서비스를 제공합니다.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------------------------->
+            <div class="scroll-section" style="background-color: #F7F7F7;">
+                <div class="section-wirerobot">
+                    <div class="wrapper-wirerobot">
+                        <div class="section-title">
+                            <p>WireRobot</p>
+                            <p>+</p>
+                            <p>달착륙선 자세제어 <br> SYSTEM</p>
+                        </div>
+                        <div class="swiper-container">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="./images/design1.jpg" alt="로봇1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design2.jpg" alt="로봇2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design3.jpg" alt="로봇3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="./images/design4.jpg" alt="로봇2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design5.jpg" alt="로봇3">
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------------------------->
+            <div class="scroll-section">
+                <div class="section-ring">
+                    <div class="wrapper-ring">
+                        <div class="section-title">
+                            <p>OBLIQUE RING 측정기</p>
+                            <p>+</p>
+                            <p>방향 이동 <br> 플랫폼 시스템</p>
+                        </div>
+                        <div class="swiper-container">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="./images/design6.jpg" alt="ring1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design7.jpg" alt="ring2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design8.jpg" alt="ring3">
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+                <!--------------------------------------------------->
+                <div class="scroll-section" style="background-color: #F7F7F7;">
+                <div class="section-mr">
+                    <div class="wrapper-mr">
+                        <div class="section-title">
+                            <p>MR, TR Slip ring <br> 내구성 검사 장비</p>
+                            <p>+</p>
+                            <p>BLU 도강판 <br> 타공 장비개발</p>
+                        </div>
+                        <div class="swiper-container">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="./images/design9.jpg" alt="mr1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design10.jpg" alt="mr2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/design11.jpg" alt="mr3">
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!--------------------------------------------------->
+                <div class="scroll-section">
+                <div class="section-gear">
+                    <div class="wrapper-gear">
+                        <div class="section-title">
+                        <p>기계장비 <br> 진동평가용 실험장치</p>
+                        <p>+</p>
+                        <p>OLED IVL <br> 휘도 검사장비</p>
+                    </div>
+                    <div class="swiper-container">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="./images/design12.jpg" alt="gear1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/design13.jpg" alt="gear2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/design14.jpg" alt="gear3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/design15.jpg" alt="gear3">
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--------------------------------------------------->
+            <div class="scroll-section" style="background-color: #F7F7F7;">
+                <div class="section-machining ">
+                    <div class="wrapper-machining ">
+                        <div class="section-title">
+                            <p>항공산업 부품 가공</p>
+                        </div>
+                        <div class="swiper-container">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img src="./images/overview21.jpg" alt="machining 1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/overview23.jpg" alt="machining 2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/overview24.jpg" alt="machining 3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/overview25.jpg" alt="machining4">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/overview22.jpg" alt="machining5">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./images/overview26.jpg" alt="machining6">
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer를 로드할 부분 -->
+    <div id="footer"></div>
+
+<div th:insert="layouts/footer :: footer"></div>
+</body>
+</html>

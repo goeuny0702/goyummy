@@ -1,0 +1,150 @@
+/* 전체 페이지 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #fbd3e9, #bb377d);
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* 헤더, 푸터 포함하는 컬럼 구조 */
+}
+
+/* 헤더와 푸터 사이에서 로그인 박스를 배치할 공간을 지정 */
+.login-wrapper {
+    width: 100%;
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.login-wrapper .back_img {
+    width: 100%;
+    position: absolute;
+    opacity: 0.7;
+
+
+}
+
+.login-wrapper .back_img img {
+    width: 100%;
+
+}
+
+
+/* 로그인 박스 스타일 */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+/* 아바타 이미지 */
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+}
+
+.avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* 입력 필드 스타일 */
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group input:focus {
+    border-color: #bb377d;
+    outline: none;
+}
+
+/* 로그인 버튼 */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #046cc4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #046cc4;
+}
+
+/* 소셜 로그인 버튼들 */
+.social-logins {
+    display: flex;
+    flex-direction: column; /* 버튼을 세로로 정렬 */
+    align-items: center;
+    gap: 10px; /* 버튼들 사이의 간격을 추가 */
+    margin-top: 20px; /* 입력 필드와 버튼 사이의 간격 */
+}
+
+.social-logins a {
+    display: inline-block;
+    width: 160px; /* 버튼의 통일된 너비 설정 */
+    height: 40px; /* 버튼의 통일된 높이 설정 */
+}
+
+.social-logins img {
+    width: 100%; /* 이미지가 링크 영역에 맞게 꽉 차도록 설정 */
+    height: 100%;
+}
+
+/* 회원가입 링크 */
+.link {
+    display: flex;
+    justify-content: center; /* 회원가입 버튼을 중앙 정렬 */
+    margin-top: 20px; /* 소셜 로그인 버튼과의 간격 */
+}
+
+.signup-button {
+    background-color: #046cc4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #046cc4;
+}
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <link rel="stylesheet" th:href="@{/css/part5.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="shortcut icon" th:href="@{/images/그림1.png}" />
+    <link rel="icon" th:href="@{/images/그림1.png}" />
+    <script defer th:src="@{/js/main2.js}"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:insert="layouts/header :: header"></div>
+
+    <div class="homepage5">
+        <img class="part1" th:src="@{/images/image9.png}">
+        <div class="text">
+            <p class="text-a">FACILITY STATUS</p>
+            <p class="text-b">설비현황</p>
+        </div>
+        
+        <div class="navbar">
+            <div class="menu-category">
+                <div class="home-icon">
+                    <a th:href="@{/main}" class="homeimage"><img src="./images/home-icon.png" alt="homeimage"></a>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">생산공정</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">신우시스템</a>
+                        <a th:href="@{/machine}">사업분야</a>
+                        <a th:href="@{/part5}">생산공정</a>
+                        <a th:href="@{/precision}">제품소개</a>
+                        <a th:href="@{/board-list}">고객센터</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">설비현황</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part5}">설비현황</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-down">
+            
+        </div>
+        <div class="part2">
+            <h1>기계설비</h1>
+            <div data-aos="fade-up-right">
+                <div class="machine1">
+                    <img th:src="@{/images/facilities1.png}" alt="machine1">
+                    <div class="machine1-table">
+                        <h2>CNC Bridge Type Machining Center</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>3,000× 2,100× 1,000</td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>AWEA</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up-right">
+                <div class="machine2">
+                    <img th:src="@{/images/facilities2.png}" alt="machine2">
+                    <div class="machine1-table">
+                        <h2>CNC Bridge Type Machining Center</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>5,000× 1,200× 1,000</td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>AWEA</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up-right">
+                <div class="machine3">
+                    <img th:src="@{/images/facilities3.png}" alt="machine3">
+                    <div class="machine1-table">
+                        <h2>CNC Bridge Type Machining Center</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>4,000× 2,100× 1,000</td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>AWEA</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up-right">
+                <div class="machine4">
+                    <img th:src="@{/images/facilities4.png}" alt="machine4">
+                    <div class="machine1-table">
+                        <h2>CNC Bridge Type Machining Center</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>4,100× 2,100× 1,000</td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>AWEA</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up-right">
+                <div class="machine5">
+                    <img th:src="@{/images/facilities5.png}" alt="machine5">
+                    <div class="machine1-table">
+                        <h2>PUMA VTS1620</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>Φ2,000 × 1,000 </td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>두산인프라코어</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up-right">
+                <div class="machine6">
+                    <img th:src="@{/images/facilities6.png}" alt="machine6">
+                    <div class="machine1-table">
+                        <h2>PUMA VT1100</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>Φ1,100 × 1,000  </td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>두산인프라코어</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up-right">
+                <div class="machine7">
+                    <img th:src="@{/images/facilities7.png}" alt="machine7">
+                    <div class="machine1-table">
+                        <h2>PUMA 280L</h2>
+                        <table class="machine1-text">
+                            <tr>
+                                <th>Work Capacity</th>
+                                <td>Φ420 × 658 </td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <th>Q’ty</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Maker</th>
+                                <td>두산인프라코어</td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+            
+        </div>    
+    </div> 
+    
+    <script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+<div th:insert="layouts/footer :: footer"></div>
+</body>
+</html>

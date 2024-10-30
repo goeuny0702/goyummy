@@ -1,0 +1,412 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+
+}
+
+.homepage4 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.homepage4 .part1 {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+
+}
+
+.homepage4 .text {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 130px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.homepage4 .text .text-a {
+    /* margin-left: 20px; */
+    margin-bottom: 5px;
+    font-size: 20px;
+
+}
+
+.homepage4 .text .text-b {
+    margin-top: 5px;
+    font-size: 65px;
+}
+
+.homepage4 .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 30px; */
+    /* padding-right: 0px; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 100%;
+    height: 50px;
+    /* margin-left: 100px; */
+    margin-top: 500px;
+    position: absolute;
+}
+
+.homepage4 .navbar .menu-category {
+    display: flex;
+    padding-left: 100px;
+    align-items: center; 
+}
+
+.homepage4 .navbar .menu-category .home-icon {
+    margin-right: 20px;
+}
+
+.homepage4 .navbar .menu-category .home-icon .homeimage {
+    
+
+}
+
+.homepage4 .navbar .menu-category .home-icon .homeimage img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; 
+
+}
+
+.homepage4 .navbar .menu-category .dropdown .menu-item {
+    margin-right: 20px;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+/* .homepage1 .navbar .menu-category1 .dropdown .menu-item:hover {
+    color: #007bff;
+} */
+
+.homepage4 .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+.homepage4 .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.homepage4 .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #f7f7f7;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.homepage4 .dropdown-content a:hover {
+    /* background-color: #f1f1f1; */
+    color:  #046cc4;
+    font-weight: bold;
+}
+
+.homepage4 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.homepage4 .dropdown::after {
+    content: url(/images/dropdown2.png);
+    margin-left: 5px;
+    font-size: 19px;
+    display: inline-block;
+    transform: scale(0.3);
+    transform-origin: center;
+    vertical-align: middle;
+}
+
+.homepage4 .part2 {
+    margin-top: 600px;
+    position: relative;
+    /* width: 100%;
+    overflow: hidden;  */
+}
+
+.homepage4 .part2 h1 {
+    margin-left: 100px;
+    font-size: 35px;
+}
+
+.homepage4 .part2 .slider {
+    width: 100%;
+    /* max-width: 600px; */
+    height: 750px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  
+
+}
+
+.homepage4 .part2 .slider .slides {
+    display: flex;
+    width: 500%; /* 슬라이드 5개이므로 500% */
+    transition: transform 0.5s ease-in-out;
+
+
+}
+
+.homepage4 .part2 .slider .slides .slide {
+    width: 20%;
+    flex-shrink: 0;
+}
+
+
+/* 이미지 스타일 */
+.homepage4 .part2 .slider .slides .slide img {
+    width: 90%;
+    margin-left: 73px;
+    display: block;
+    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너에 맞추기 */
+    height: 700px; /* 고정된 높이를 설정하여 비율 유지 */
+}
+
+/* 라디오 버튼 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+
+/* 슬라이드 이동: 첫 번째 라디오 버튼이 체크되면 첫 번째 슬라이드 */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+/* 두 번째 라디오 버튼이 체크되면 두 번째 슬라이드 */
+#slide2:checked ~ .slides {
+    transform: translateX(-20%);
+}
+
+/* 세 번째 라디오 버튼이 체크되면 세 번째 슬라이드 */
+#slide3:checked ~ .slides {
+    transform: translateX(-40%);
+}
+
+/* 네 번째 라디오 버튼이 체크되면 네 번째 슬라이드 */
+#slide4:checked ~ .slides {
+    transform: translateX(-60%);
+}
+
+/* 다섯 번째 라디오 버튼이 체크되면 다섯 번째 슬라이드 */
+#slide5:checked ~ .slides {
+    transform: translateX(-80%);
+}
+
+/* 네비게이션 버튼 스타일 */
+.navigation {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.nav-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* 마우스를 올렸을 때 색상 변경 */
+.nav-btn:hover {
+    background-color: #046cc4; /* hover 시 색상 */
+}
+
+/* 클릭된 버튼의 색상 */
+input[type="radio"]:checked + .nav-btn {
+    background-color: #046cc4; /* 클릭된 후 유지되는 색상 */
+}
+
+/* 클릭된 후 hover할 때 색상 */
+input[type="radio"]:checked + .nav-btn:hover {
+    background-color: #046cc4; /* 클릭된 후 hover 시 색상 */
+}
+
+.homepage4 .part3 {
+    width: 100%;
+    position: relative;
+    /* margin-top: 1600px; */
+    margin-bottom: 200px;
+}
+
+.homepage4 .part3 h1 {
+    margin-left: 100px;
+    font-size: 35px;
+}
+
+.homepage4 .part3 .map {
+    background-image: url(/images/map2.png);
+    display: block;
+    background-size: cover;
+    width: 90%;
+    margin-left: 73px;
+    height: 500px;
+    
+
+}
+
+.homepage4 .part3 .map img {
+    
+}
+
+.homepage4 .part3 .map_text {
+
+}
+
+.homepage4 .part3 .map_text .address_fax {
+    display: flex;
+    margin-left: 150px;
+    margin-top: 40px;
+    /* font-weight: bold; */
+    /* font-size: 17px; */
+    align-items: center; 
+
+}
+
+.homepage4 .part3 .map_text .address_fax p {
+    margin-left: 30px;
+    margin-top: 10px;
+    /* font-weight: bold;
+    font-size: 15px; */
+    
+}
+
+.homepage4 .part3 .map_text .address_fax .address {
+    display: flex;
+
+}
+
+.homepage4 .part3 .map_text .address_fax .address img {
+    width: 35px;
+    height: 35px;
+    
+}
+
+.homepage4 .part3 .map_text .address_fax .address .text-a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.homepage4 .part3 .map_text .address_fax .address .text-b {
+    font-size: 17px;
+}
+
+.homepage4 .part3 .map_text .address_fax .fax {
+    display: flex;
+    margin-left: 200px;
+
+}
+
+.homepage4 .part3 .map_text .address_fax .fax img {
+    width: 35px;
+    height: 35px;
+
+}
+
+.homepage4 .part3 .map_text .address_fax .fax .text-a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.homepage4 .part3 .map_text .address_fax .fax .text-b {
+    font-size: 17px;
+}
+
+.homepage4 .part3 .map_text .call_email {
+    display: flex;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.homepage4 .part3 .map_text .call_email p {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.homepage4 .part3 .map_text .call_email .call {
+    display: flex;
+    margin-left: -5px;
+
+}
+
+.homepage4 .part3 .map_text .call_email .call img {
+    width: 35px;
+    height: 35px;
+
+}
+
+.homepage4 .part3 .map_text .call_email .call .text-a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7px;
+
+}
+
+.homepage4 .part3 .map_text .call_email .call .text-b {
+    font-size: 17px;
+    margin-top: 8px;
+
+}
+
+.homepage4 .part3 .map_text .call_email .email {
+    display: flex;
+    margin-left: 352px;
+
+}
+
+.homepage4 .part3 .map_text .call_email .email img {
+    width: 35px;
+    height: 35px;
+    
+}
+
+.homepage4 .part3 .map_text .call_email .email .text-a {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 7px;
+    
+}
+
+.homepage4 .part3 .map_text .call_email .email .text-b {
+    font-size: 17px;
+    margin-top: 8px;
+    
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>㈜신우시스템</title>
+    <!-- css 관련 -->
+    <link rel="stylesheet" th:href="@{/css/part2.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <!-- img 관련 -->
+    <link rel="shortcut icon" th:href="@{/images/그림1.png}">
+    <link rel="icon" th:href="@{/images/그림1.png}" />
+</head>
+<body>
+<div th:insert="layouts/header :: header"></div>
+
+    <div class="homepage2">
+        <div style="width: 100%; height: 100%;">
+            <img class="part1" th:src="@{/images/image2.jpg}" />
+        </div>
+
+        <div class="text">
+            <p class="text-a">Company overview</p>
+            <p class="text-b">회사개요</p>
+        </div>
+        
+        <div class="navbar">
+            <div class="menu-category">
+                <div class="home-icon">
+                    <a th:href="@{/main}" class="homeimage"><img src="./images/home-icon.png" alt="homeimage" /></a>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">신우시스템</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">신우시스템</a>
+                        <a th:href="@{/machine}">사업분야</a>
+                        <a th:href="@{/part5}">생산공정</a>
+                        <a th:href="@{/precision}">제품소개</a>
+                        <a th:href="@{/board-list}">고객센터</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="menu-item">회사개요</a>
+                    <div class="dropdown-content">
+                        <a th:href="@{/part1}">ceo 인사말</a>
+                        <a th:href="@{/part2}">회사개요</a>
+                        <a th:href="@{/part3}">연혁</a>
+                        <a th:href="@{/part4}">오시는길</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="part2">
+            <h1>회사개요</h1>
+            <div class="sky">
+                <img th:src="@{/images/sky2.jpg}" alt="skyimage" />
+            </div>
+            <div class="sky_text">
+                <h1>" 고객만족 " 에 최선을 다하는 기업, 신우시스템 (주)</h1>
+                <br>
+                <p>고객의 요구와 기대를 충족시키기 위해 끊임없이 연구하며</p>
+                <p>개념설계부터 제작, 조립까지 한 번에 유통하는 서비스를 제공하고 있습니다.</p>
+                <p>신우 시스템과 함께라면 항상 고객의 요구에 부응하는</p>
+                <p>최상의 품질과 서비스를 제공할 것을 약속드립니다.</p>
+                <p>고맙습니다.</p>
+            </div>
+
+        </div>
+		<br><br>
+        <div class="overview-container">
+            <div class="map_imge">
+                <img th:src="@{/images/map_page2.png}" alt="map_imges">
+            </div>
+            <div class="overview">
+                <h2>OVERVIEW</h2>
+                <table class="overview-table">
+                    <tr>
+                        <th>상호(법인명)</th>
+                        <td>신우시스템(주)</td>
+                    </tr>
+                    <hr>
+                    <tr>
+                        <th>사업자등록번호</th>
+                        <td>125-81-97050</td>
+                    </tr>
+                    <tr>
+                        <th>대표</th>
+                        <td>이수복, 이득형</td>
+                    </tr>
+                    <tr>
+                        <th>설립일</th>
+                        <td>2011년 07월 07일</td>
+                    </tr>
+                    <tr>
+                        <th>사업분야</th>
+                        <td>기계가공</td>
+                    </tr>
+                    <tr>
+                        <th>전화</th>
+                        <td>031-334-8417</td>
+                    </tr>
+                    <tr>
+                        <th>팩스</th>
+                        <td>031-624-3721</td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td>sinwoosystem@daum.net</td>
+                    </tr>
+                    <tr>
+                        <th>소재지</th>
+                        <td>경기도 용인시 처인구 남사면 원암로 341</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>   
+    
+ <div th:insert="layouts/footer :: footer"></div>
+ 
+    
+</body>
+</html>
